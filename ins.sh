@@ -44,20 +44,6 @@ echo "Skipping Niri Config Overwrite"
 ;;
 esac
 
-printf "This will install greetd + noctalia-greeter (only for chimera linux chuds) Y/N? "
-read -r response
-case  "$response" in
- [yY]|[yY][eE][sS])
-doas apk add greetd noctalia-greeter
-doas mkdir -p /etc/greetd/
-doas cp greetd.toml /etc/greetd/config.toml
-echo "Noctalia Greetd Installed"
- ;;
-*)
-echo "Skipping Greetd"
-;;
-esac
-
 printf "Install Flathub repo? Y/N? "
 read -r response
 case  "$response" in
@@ -93,4 +79,23 @@ echo "Installing Kitty Larp Config"
 *)
 echo "LARP failed."
 ;;
+esac
+printf "This will install greetd + noctalia-greeter (only for chimera linux chuds) Y/N? "
+read -r response
+case  "$response" in
+ [yY]|[yY][eE][sS])
+doas apk add greetd noctalia-greeter
+doas mkdir -p /etc/greetd/
+doas cp greetd.toml /etc/greetd/config.toml
+echo "Noctalia Greetd Installed"
+ ;;
+*)
+echo "Skipping Greetd"
+;;
+esac
+printf "This will enable greetd and will restart your session (only for chimera linux chuds) Y/N? "
+read -r response
+case  "$response" in
+ [yY]|[yY][eE][sS])
+doas dinitctl enable greetd
 esac
