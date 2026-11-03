@@ -35,7 +35,7 @@ else
 echo "nothing overwrote"
 fi
 
-read -p "Install Noctalia Greetd Greeter (ngl ts only for chimera only idfk bout other distros)" response
+read -p "Install Noctalia Greetd Greeter (ngl ts only for chimera only idfk bout other distros.) Y/N?" response
 if [[ "$response" =~ ^[yY](es)?$ ]]; then
 doas apk add greetd noctalia-greeter
 doas mkdir -p /etc/greetd/
