@@ -80,6 +80,18 @@ echo "Installing Kitty Larp Config"
 echo "LARP failed."
 ;;
 esac
+printf "Breeze-Cursor enable Y/N? "
+read -r response
+case  "$response" in
+ [yY]|[yY][eE][sS])
+doas apk add breeze-cursors
+gsettings set org.gnome.desktop.interface cursor-theme "breeze_cursors"
+echo "cursor installed"
+ ;;
+*)
+echo "Skipping"
+;;
+esac
 printf "This will install greetd + noctalia-greeter (only for chimera linux chuds) Y/N? "
 read -r response
 case  "$response" in
