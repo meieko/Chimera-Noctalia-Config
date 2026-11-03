@@ -6,7 +6,7 @@ printf "Chimera Linux Noctalia Install. Y/N? "
 read -r response
 case  "$response" in
  [yY]|[yY][eE][sS]) 
-doas apk add noctalia xdg-desktop-portal gnome-keyring libsecret networkmanager flatpak fonts-nerd-jetbrains-mono
+doas apk add noctalia xdg-desktop-portal-gnome gnome-keyring libsecret networkmanager flatpak fonts-nerd-jetbrains-mono
 echo "Installing."
 	;;
 	*)
