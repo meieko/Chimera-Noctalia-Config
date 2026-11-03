@@ -86,7 +86,7 @@ printf "Make Kitty seethru? (MEGA LARP) Y/N? "
 read -r response
 case  "$response" in
  [yY]|[yY][eE][sS])
-mkdir -p ~/.config/kitty/kitty.conf
+mkdir -p ~/.config/kitty/
 cp kitty.conf ~/.config/kitty/kitty.conf
 echo "Installing Kitty Larp Config"
 ;;
