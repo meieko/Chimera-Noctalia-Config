@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-echo "hacking your shi twin...JK"
+echo "Installation Started I am ai 100%"
 
 printf "Chimera Linux Noctalia Install. Y/N? " 
 read -r response
 case  "$response" in
  [yY]|[yY][eE][sS]) 
-doas apk add noctalia xdg-desktop-portal-gnome gnome-keyring libsecret networkmanager flatpak fonts-nerd-jetbrains-mono nautilus gvfs 
+doas apk add noctalia xdg-desktop-portal-gnome gnome-keyring libsecret networkmanager flatpak fonts-nerd-jetbrains-mono nautilus gvfs fonts-noto-sans-cjk
 echo "Installing."
 	;;
 	*)
@@ -68,7 +68,7 @@ echo "installing flathub apps"
 echo "Skipping Apps"
 ;;
 esac
-printf "Make Kitty seethru? (MEGA LARP) Y/N? "
+printf "Make Kitty seethru? (MEGA LARP/Obviously this would overwrite your kitty.conf don't do unless you just want ts transparent) Y/N? "
 read -r response
 case  "$response" in
  [yY]|[yY][eE][sS])
