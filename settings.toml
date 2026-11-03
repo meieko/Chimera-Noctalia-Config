@@ -61,7 +61,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
         show_weather = true
 
 [shell]
-avatar_path = "/home/miko/Pictures/WP1.png"
+avatar_path = "/home/{{USERNAME}}/Pictures/"
 font_family = "JetBrainsMono NF"
 
     [shell.panel]
@@ -74,13 +74,13 @@ source = "wallpaper"
     builtin_ids = [ "gtk3", "gtk4", "kitty", "niri", "qt" ]
 
 [wallpaper.default]
-path = "/home/miko/Pictures/WP1.png"
+path = "/home/{{USERNAME}}/Pictures/"
 
 [wallpaper.last]
-path = "/home/miko/Pictures/WP1.png"
+path = "/home/{{USERNAME}}/Pictures/"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/miko/Pictures/WP1.png"
+path = "/home/{{USERNAME}}/Pictures/"
 
 [widget.network]
 show_label = false
