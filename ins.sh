@@ -6,7 +6,7 @@ printf "Chimera Linux Noctalia Install. Y/N? "
 read -r response
 case  "$response" in
  [yY]|[yY][eE][sS]) 
-doas apk add noctalia xdg-desktop-portal gnome-keyring libsecret networkmanager flatpak
+doas apk add noctalia xdg-desktop-portal gnome-keyring libsecret networkmanager flatpak fonts-nerd-jetbrains-mono
 echo "Installing."
 	;;
 	*)
@@ -29,6 +29,7 @@ cp noctaliasettings.toml ~/.local/state/noctalia/settings.toml
 *)
 echo "Skipping Noctalia Config Overwrite (pretty sure you can figure it out)"
 ;;
+
 esac
 printf "This will overwrite your Niri config. (I do not recommend doing this) Y/N? "
 read -r response
@@ -42,6 +43,7 @@ echo "overwriting"
 echo "Skipping Niri Config Overwrite"
 ;;
 esac
+
 printf "This will install greetd + noctalia-greeter (only for chimera linux chuds) Y/N? "
 read -r response
 case  "$response" in
@@ -55,6 +57,7 @@ echo "Noctalia Greetd Installed"
 echo "Skipping Greetd"
 ;;
 esac
+
 printf "Install Flathub repo? Y/N? "
 read -r response
 case  "$response" in
@@ -66,6 +69,7 @@ echo "Flathub Repo Installed"
 echo "Skipping Repo Install"
 ;;
 esac
+
 printf "Install Flathub apps? (Discord, Steam, Sober client for Roblox) Y/N? "
 read -r response
 case  "$response" in
@@ -76,5 +80,17 @@ echo "installing flathub apps"
 ;;
 *)
 echo "Skipping Apps"
+;;
+esac
+printf "Make Kitty seethru? (MEGA LARP) Y/N? "
+read -r response
+case  "$response" in
+ [yY]|[yY][eE][sS])
+mkdir -p ~/.config/kitty/kitty.conf
+cp kitty.conf ~/.config/kitty/kitty.conf
+echo "Installing Kitty Larp Config"
+;;
+*)
+echo "LARP failed."
 ;;
 esac
