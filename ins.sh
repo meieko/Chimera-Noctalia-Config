@@ -80,7 +80,7 @@ echo "Installing Kitty Larp Config"
 echo "LARP failed."
 ;;
 esac
-printf "Breeze-Cursor enable Y/N? "
+printf "Breeze-Cursor enable Y/N? (chimera only chuds) "
 read -r response
 case  "$response" in
  [yY]|[yY][eE][sS])
